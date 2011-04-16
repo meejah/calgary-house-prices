@@ -1,11 +1,11 @@
 
-set term png size 512,200 small
+set term png size 512,160 small
 set output "house-prices.png"
 set ylabel "$"
 set xdata time
 set timefmt "%m/%Y"
 set format x "%Y"
-set title "Calgary Median House Prices\nsource: CREB data" offset 20,-3.5
+set title "Calgary Median House Prices\nsource: CREB data" offset 20,-9
 set nokey
 ## second arg is increment, given in seconds (monthly, roughly)
 ## setting this will give a label for every month; pretty busy
