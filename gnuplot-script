@@ -1,15 +1,11 @@
-#set style data histogram
-#set style data linespoints
-#set xtic rotate by -45 scale 0
-#set term png size 1024,768 large
-set term png size 512,400 small
+
+set term png size 512,200 small
 set output "house-prices.png"
 set ylabel "$"
 set xdata time
 set timefmt "%m/%Y"
 set format x "%Y"
-#set title "Calgary Median House Prices\nsource: CREB data" offset 40,-4
-set title "Calgary Median House Prices\nsource: CREB data" offset 20,-4
+set title "Calgary Median House Prices\nsource: CREB data" offset 20,-3.5
 set nokey
 ## second arg is increment, given in seconds (monthly, roughly)
 ## setting this will give a label for every month; pretty busy
@@ -17,16 +13,12 @@ set nokey
 set mxtics 12
 set xtic scale 2
 
-
-#set linestyle 1 lt 1 pt 9 ps 0.7
-#set linestyle 2 lt 3 lw 3
-
 set style line 1 lt 1 lw 2 pt 4 ps 1
 set style line 2 lt -1 lw 2 pt 4 ps 0.2
 
-set arrow from "06/2007",490000 to "05/2007",487523
-set label "$487,523\nJune, 2007" at "06/2007",490000
-set label "$400,000\nMarch 2011" at "04/2011",400000
+#set arrow from "06/2007",490000 to "05/2007",487523
+#set label "$487,523\nJune, 2007" at "06/2007",490000
+#set label "$400,000\nMarch 2011" at "04/2011",400000
 
 
 plot 'real-estate-prices' using 1:2 title "median house price" linestyle 1 with lines
