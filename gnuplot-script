@@ -2,7 +2,7 @@
 #set style data linespoints
 #set xtic rotate by -45 scale 0
 set term png size 1024,768 large
-set output "prices.png"
+set output "house-prices.png"
 set ylabel "$"
 set xdata time
 set timefmt "%m/%Y"
