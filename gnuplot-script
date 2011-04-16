@@ -7,6 +7,14 @@ set ylabel "$"
 set xdata time
 set timefmt "%m/%Y"
 set format x "%Y"
+set title "Calgary Median House Prices\nsource: CREB data" offset 40,-4
+set nokey
+## second arg is increment, given in seconds (monthly, roughly)
+## setting this will give a label for every month; pretty busy
+#set mxtics "01/2004", 2628000, "03/2011"
+set mxtics 12
+set xtic scale 2
+
 
 #set linestyle 1 lt 1 pt 9 ps 0.7
 #set linestyle 2 lt 3 lw 3
