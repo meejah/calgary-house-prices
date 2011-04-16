@@ -9,6 +9,7 @@ set timefmt "%m/%Y"
 set format x "%Y"
 set title "Calgary Median House Prices\nsource: CREB data" offset 40,-4
 set nokey
+#set key bottom right box ls 1 spacing 2
 ## second arg is increment, given in seconds (monthly, roughly)
 ## setting this will give a label for every month; pretty busy
 #set mxtics "01/2004", 2628000, "03/2011"
@@ -25,7 +26,10 @@ set style line 2 lt -1 lw 2 pt 4 ps 1
 set arrow from "06/2007",490000 to "05/2007",487523
 set label "$487,523\nJune, 2007" at "06/2007",490000
 set label "$400,000\nMarch 2011" at "04/2011",400000
+set label "2004-2005 best-fit\nextrapolated" at "11/2009",300000 textcolor lt 3
+set arrow from "11/2009",300000 to "6/2009",300000 ls 3
 
 
 plot 'real-estate-prices' using 1:2 title "median house price" linestyle 1 with lines,\
-  'real-estate-prices' using 1:2 title "median house price" linestyle 2 with points
+  'real-estate-prices' using 1:2 title "median house price" linestyle 2 with points,\
+  '2004-05-trend' using 1:2 title "2004-2005 trend" linestyle 3 with lines
