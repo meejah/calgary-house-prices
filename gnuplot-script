@@ -23,9 +23,9 @@ set xtic scale 2
 set style line 1 lt 1 lw 2 pt 4 ps 1
 set style line 2 lt -1 lw 2 pt 4 ps 1
 
-set arrow from "06/2007",490000 to "05/2007",487523
-set label "$487,523\nJune, 2007" at "06/2007",490000
-set label "$400,000\nMarch 2011" at "04/2011",400000
+set arrow from "08/2007",487523 to "05/2007",487523 ls 3
+set label "$487,523\nJune, 2007" at "09/2007",487523 textcolor lt 3
+
 set label "2004-2005 best-fit\nextrapolated" at "11/2009",300000 textcolor lt 3
 set arrow from "11/2009",300000 to "6/2009",300000 ls 3
 
